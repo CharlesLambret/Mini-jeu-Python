@@ -1,6 +1,7 @@
 import pygame, random, os
 from getfiles import Images
 
+
 WINDOW_WIDTH=1000
 FPS = 60
 
@@ -27,9 +28,11 @@ class Functioning():
         self.stop_game = False
        
         self.start_level(self.level)
+   
 
     def level_completed(self, listen_events):
         if not self.stop_game:
+            self.frame_count = + 1 
             for event in listen_events:
                 left_click = event.type == pygame.MOUSEBUTTONDOWN and event.button == 1
                 if left_click:
